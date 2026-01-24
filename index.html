@@ -3,54 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TW-PocketScreener 是一款專為台灣投資人設計的智慧型存股篩選工具，結合巴菲特投資心法，自動分析台股財報，找出具備護城河的定存標的。">
     
     <meta name="google-adsense-account" content="ca-pub-3682384993858973">
-    <title>Eason's Stock Tools</title>
+
+    <title>TW-PocketScreener 台股智慧篩選器 | 您的存股好夥伴</title>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973"
      crossorigin="anonymous"></script>
 
     <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --accent-color: #ffc107;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+        }
         body {
-            font-family: "Microsoft JhengHei", Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
+            font-family: "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
         }
         .container {
+            max-width: 800px;
+            margin: 0 auto;
             background: white;
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        h1 { color: #333; }
-        p { color: #666; font-size: 18px; }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #198754;
+            margin-top: 25px;
+        }
+        .quote {
+            text-align: center;
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #d63384;
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: #e7f1ff;
+            border-radius: 10px;
+        }
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #007bff;
+            padding: 15px 40px;
+            background-color: var(--primary-color);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 20px;
+            border-radius: 50px;
+            font-size: 22px;
             font-weight: bold;
+            box-shadow: 0 4px 6px rgba(13, 110, 253, 0.3);
+            transition: all 0.3s ease;
         }
-        .btn:hover { background-color: #0056b3; }
+        .btn:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(13, 110, 253, 0.4);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: var(--secondary-color);
+        }
+        .footer a { color: var(--secondary-color); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>歡迎來到 Eason 的股票分析網</h1>
-        <p>本站提供專業的台股篩選工具 (TW-PocketScreener)。</p>
-        <p>網站目前正常運作中，請點擊下方按鈕開始使用。</p>
+        <h1>🚀 關於 TW-PocketScreener v2.3.2</h1>
+        <div class="quote">「站在巨人的肩膀上，用數據打造您的財富雪球。」</div>
         
-        <a href="/Demo_stock/" class="btn">
-            🚀 進入股票篩選工具
-        </a>
+        <p>TW-PocketScreener 是一款專為台灣投資人設計的智慧型存股篩選工具。我們的目的只有一個：<strong>幫助投資人在茫茫股海中，快速且精準地找出具有「護城河」優勢的定存標的。</strong></p>
+        <p>我們不看短期的股價波動，而是專注於企業長期的內在價值。透過程式自動化技術，我們深入分析每一檔台股的財報細節，讓一般投資人也能擁有專業法人等級的選股濾鏡。</p>
+
+        <h2>🛡️ 這個工具能幫助您什麼？</h2>
+        <ul>
+            <li><strong>節省巨量時間：</strong>不用再手動翻閱財報，系統自動批次掃描 1900+ 檔股票，40 分鐘內完成人工需要數週的數據整理。</li>
+            <li><strong>避開地雷陷阱：</strong>透過嚴格的財務指標，自動剔除獲利不穩、靠業外收入灌水（如賣地）、或打腫臉充胖子（超額配息）的高風險公司。</li>
+            <li><strong>建立投資紀律：</strong>結合巴菲特與台灣存股名家的智慧，提供客觀的數據支撐，讓您的買賣決策不再受情緒左右。</li>
+            <li><strong>無縫研究體驗：</strong>內建投資心法教學，篩選出潛力股後，點擊即可直連 Yahoo 股市查看即時動態，從學習到實戰一氣呵成。</li>
+        </ul>
+
+        <h2>🏆 核心特色：黃金存股 8 法則</h2>
+        <p>只需按下「一鍵存股」按鈕，系統即刻套用以下 8 大嚴苛標準，為您篩選出真正的傳家寶：</p>
+
+        <h3>💎 獲利護城河</h3>
+        <ul>
+            <li><span class="highlight">5年平均 ROE > 15%：</span>股神巴菲特最看重的指標，確保公司運用股東資金的效率極高。</li>
+            <li><span class="highlight">本業純度 > 80% (v2.2新功能)：</span>確保獲利來自核心業務，而非一次性業外收益。</li>
+            <li><span class="highlight">毛利變動 < 5% (v2.2新功能)：</span>確認公司具備定價權，不受景氣循環劇烈影響。</li>
+        </ul>
+
+        <h3>💎 股息永動機</h3>
+        <ul>
+            <li><span class="highlight">連續 10 年配息：</span>經歷過金融風暴考驗，依然能穩定發錢的企業。</li>
+            <li><span class="highlight">5年平均殖利率 > 5%：</span>確保買在合理的價格區間，擁有足夠的安全邊際。</li>
+            <li><span class="highlight">盈餘發放率 60%~100% (v2.2新功能)：</span>賺多少發多少，公司大方且財務健康。</li>
+        </ul>
+
+        <h3>💎 成長與動能</h3>
+        <ul>
+            <li><span class="highlight">EPS 穩定成長：</span>近一年 EPS > 1 且 5 年平均 > 2，確保獲利能力未衰退。</li>
+        </ul>
+
+        <div class="cta-section">
+            <p style="font-size: 1.1em; margin-bottom: 20px;">TW-PocketScreener —— 讓好公司的股票，成為您致富路上的最強隊友。</p>
+            <a href="/Demo_stock/" class="btn">
+                🚀 立即開始使用工具
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Eason Chang. All rights reserved.</p>
+            <p><a href="/privacy.html">隱私權政策</a> | <a href="mailto:taco1243@gmail.com">聯絡我們</a></p>
+        </div>
     </div>
 
 </body>
