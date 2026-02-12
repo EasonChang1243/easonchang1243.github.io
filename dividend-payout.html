@@ -4,156 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="公司賺錢卻不發股利？小心「小氣鬼」公司！教你如何看懂盈餘發放率，並篩選出連續 10 年穩定配息的真正定存股。">
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973"
-     crossorigin="anonymous"></script>
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973" crossorigin="anonymous"></script>
     <title>賺 10 元發 8 元！如何篩選出「大方」且「持久」的配息冠軍？ | TW-PocketScreener</title>
-
     <style>
-        :root {
-            --primary-color: #0d6efd;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --white: #ffffff;
-            --money-color: #ffc107;
-        }
-        body {
-            font-family: "Microsoft JhengHei", Arial, sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: var(--white);
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav li { margin: 0 10px; }
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        nav a:hover { color: var(--primary-color); }
+        :root { --primary-color: #0d6efd; --text-color: #333; --bg-color: #f8f9fa; --money-color: #ffc107; }
+        body { font-family: "Microsoft JhengHei", Arial, sans-serif; line-height: 1.8; color: var(--text-color); background-color: var(--bg-color); margin: 0; padding: 0; }
 
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+        /* 統一導覽列 */
+        nav { background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; width: 100%; overflow: hidden; }
+        nav ul { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0; padding: 10px 20px; list-style: none; gap: 15px; scrollbar-width: none; }
+        nav ul::-webkit-scrollbar { display: none; }
+        nav li { flex: 0 0 auto; margin: 0; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: bold; font-size: 1rem; display: inline-block; padding: 8px 12px; border-radius: 20px; background-color: #f8f9fa; transition: all 0.2s; }
+        nav a:hover, nav a.active { color: white; background-color: var(--primary-color); }
+
+        .container { max-width: 800px; margin: 30px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         h1 { font-size: 2em; color: #2c3e50; border-bottom: 3px solid var(--primary-color); padding-bottom: 15px; }
         h2 { color: #2c3e50; margin-top: 40px; border-left: 5px solid var(--primary-color); padding-left: 15px; }
         p { margin-bottom: 20px; font-size: 1.1em; }
-        
-        .rule-box {
-            background-color: #fff8e1;
-            border-left: 5px solid #ffc107;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-
-        .cta-box {
-            text-align: center;
-            margin-top: 50px;
-            padding: 40px;
-            background: linear-gradient(135deg, #1d976c 0%, #93f9b9 100%);
-            color: white;
-            border-radius: 10px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background-color: #fff;
-            color: #1d976c;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
+        .rule-box { background-color: #fff8e1; border-left: 5px solid #ffc107; padding: 20px; margin: 30px 0; border-radius: 5px; }
+        .cta-box { text-align: center; margin-top: 50px; padding: 40px; background: linear-gradient(135deg, #1d976c 0%, #93f9b9 100%); color: white; border-radius: 10px; }
+        .btn { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: #fff; color: #1d976c; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
         .btn:hover { transform: scale(1.05); }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 50px;
-        }
+        footer { text-align: center; padding: 20px; color: #666; font-size: 0.9em; margin-top: 50px; }
         footer a { color: #666; }
     </style>
 </head>
 <body>
-
     <nav>
         <ul>
             <li><a href="/">首頁</a></li>
             <li><a href="/Demo_stock/">📈 股票工具</a></li>
             <li><a href="/roe-guide.html">ROE 教學</a></li>
-            <li><a href="/dividend-payout.html" style="color: #0d6efd;">💰 配息秘密</a></li>
+            <li><a href="/dividend-strategy.html">殖利率陷阱</a></li>
+            <li><a href="/moat-investing.html">護城河選股</a></li>
+            <li><a href="/eps-growth.html">EPS 成長</a></li>
+            <li><a href="/gross-margin.html">毛利護城河</a></li>
+            <li><a href="/dividend-payout.html" class="active">配息率秘密</a></li>
         </ul>
     </nav>
-
     <div class="container">
         <article>
             <h1>賺 10 元發 8 元！如何篩選出「大方」且「持久」的配息冠軍？</h1>
-            <p>存股族最大的噩夢是什麼？是好不容易存了一張股票，結果明年公司突然宣布「不配息」！</p>
-            <p>為了避免這種斷炊的風險，我們在選股時必須關注兩個維度：<strong>老闆夠不夠大方（發放率）</strong> 以及 <strong>獲利夠不夠持久（連續配息年數）</strong>。</p>
+            <p>存股族最大的噩夢，就是好不容易存了一張股票，結果明年公司突然宣布「不配息」！我們選股時必須關注：<strong>發放率</strong> 與 <strong>連續配息年數</strong>。</p>
 
-            
             <h2>1. 盈餘發放率 (Payout Ratio)：賺多少發多少？</h2>
             <div class="rule-box">
                 <strong>公式：發放率 = (現金股利 / EPS) × 100%</strong>
             </div>
-            <p>這代表公司賺到的錢，有多少比例分給股東。</p>
             <ul>
-                <li><strong>過低 (< 40%)：</strong> 小氣鬼公司，或者公司處於高速成長期，需要留錢擴廠（如早期的台積電）。這對需要現金流的退休族不友善。</li>
-                <li><strong>過高 (> 100%)：</strong> 打腫臉充胖子。賺 2 元發 3 元，代表公司在吃老本，這種高股息通常維持不久。</li>
-                <li><strong>黃金區間 (60% ~ 100%)：</strong> 這是最完美的狀態。公司財務健康，且願意與股東分享利潤。</li>
+                <li><strong>過低 (< 40%)：</strong> 小氣鬼公司，或需要留錢擴廠。</li>
+                <li><strong>過高 (> 100%)：</strong> 打腫臉充胖子，吃老本。</li>
+                <li><strong>黃金區間 (60% ~ 100%)：</strong> 完美。公司財務健康，且願意與股東分享利潤。</li>
             </ul>
 
             <h2>2. 連續配息年數：時間是最好的試金石</h2>
-            <p>一年發錢不難，難的是連續 10 年、20 年都能發錢。</p>
-            <p>我們設定<strong>「連續配息 >= 10 年」</strong>這個條件，是為了確保這家公司至少經歷過一次完整的景氣循環（甚至包含 2008 金融海嘯或 2020 疫情）。如果連這種大風大浪都能發出股利，這家公司的體質絕對是銅牆鐵壁。</p>
-
-            <h2>3. 黃金法則篩選邏輯</h2>
-            <p>TW-PocketScreener 結合了這兩大指標：我們幫您找出那些<strong>「連續 10 年都配息」</strong> 且 <strong>「發放率都在 60% 以上」</strong> 的超級資優生。這樣的投資組合，能讓您的被動收入如湧泉般源源不絕。</p>
+            <p>我們設定<strong>「連續配息 >= 10 年」</strong>，確保公司經歷過完整的景氣循環都能發錢，體質絕對是銅牆鐵壁。</p>
 
             <div class="cta-box">
                 <h2>打造您的現金流永動機！</h2>
                 <p>別再買到配息忽大忽小的地雷股，立即找出穩健配息王。</p>
                 <a href="/Demo_stock/" class="btn">🚀 立即篩選高配息好股</a>
             </div>
-
         </article>
     </div>
-
     <footer>
         <p>&copy; 2026 Eason Chang. All rights reserved.</p>
         <p><a href="/privacy.html">隱私權政策</a> | <a href="mailto:taco1243@gmail.com">聯絡我們</a></p>
     </footer>
-
 </body>
 </html>
