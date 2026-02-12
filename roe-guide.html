@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="什麼是 ROE？為什麼巴菲特最看重股東權益報酬率？本文將深度解析 ROE 的定義、選股標準，以及如何使用 TW-PocketScreener 篩選出高 ROE 的台股資優生。">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973"
+     crossorigin="anonymous"></script>
+
+    <title>ROE (股東權益報酬率) 完全攻略：巴菲特最愛的選股指標 | TW-PocketScreener</title>
+
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+        }
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        /* 導覽列 */
+        nav {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav a:hover { color: var(--primary-color); }
+
+        /* 主要內容區 */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h1 { font-size: 2.2em; color: #2c3e50; border-bottom: 3px solid var(--primary-color); padding-bottom: 15px; }
+        h2 { color: #2c3e50; margin-top: 40px; border-left: 5px solid var(--primary-color); padding-left: 15px; }
+        h3 { color: #555; margin-top: 30px; }
+        p { margin-bottom: 20px; font-size: 1.1em; }
+        
+        /* 重點強調框 */
+        .highlight-box {
+            background-color: #e7f1ff;
+            border-left: 5px solid #0d6efd;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        /* 行動呼籲按鈕 (CTA) */
+        .cta-box {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background-color: #ffc107;
+            color: #333;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+        footer a { color: #666; }
+        
+        /* 圖片佔位符樣式 (模擬圖片) */
+        .img-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">首頁</a></li>
+            <li><a href="/Demo_stock/">📈 股票篩選工具</a></li>
+            <li><a href="/roe-guide.html" style="color: #0d6efd;">ROE 教學</a></li>
+            <li><a href="/privacy.html">隱私權政策</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <article>
+            <h1>ROE (股東權益報酬率) 完全攻略：巴菲特最愛的選股指標</h1>
+            <p>在台股數千檔股票中，如果要只選一個指標來判斷公司好壞，股神巴菲特（Warren Buffett）的答案只有一個：<strong>ROE (Return On Equity)</strong>。</p>
+            <p>很多新手投資人只看 EPS 或股價，卻忽略了這個更能反映「公司賺錢效率」的核心指標。本篇文章將帶您深入了解 ROE 的運作原理，以及如何利用 TW-PocketScreener 找出長期獲利的定存股。</p>
+
+            
+
+            <h2>1. 什麼是 ROE？</h2>
+            <div class="highlight-box">
+                <strong>公式：ROE = (稅後淨利 / 股東權益) × 100%</strong>
+            </div>
+            <p>簡單來說，ROE 代表<strong>「公司拿股東的錢去投資，能賺回多少報酬」</strong>。</p>
+            <ul>
+                <li>如果你投資這家公司 100 元，一年後公司賺回 20 元，ROE 就是 20%。</li>
+                <li>這就像是我們把錢存在銀行的「利率」，只是這裡是存在公司的「效率」。</li>
+            </ul>
+            <p>對於存股族來說，我們希望找到的是一台「高效率印鈔機」，而不是一台吃油怪獸。因此，長期維持高 ROE 的公司，通常具備強大的護城河。</p>
+
+            <h2>2. 為什麼巴菲特堅持 ROE 要大於 15%？</h2>
+            <p>巴菲特曾在致股東信中提到，他偏好投資那些<strong>「在沒有大量舉債的情況下，依然能維持高 ROE」</strong>的企業。</p>
+            <p>在台股市場中，我們通常將標準設定為：</p>
+            <ul>
+                <li><strong>ROE > 8%</strong>：及格，比通膨和定存好。</li>
+                <li><strong>ROE > 15%</strong>：優秀，屬於市場上的資優生（如台積電、部分金融股）。</li>
+                <li><strong>ROE > 20%</strong>：卓越，但也需注意是否為一次性獲利。</li>
+            </ul>
+
+            
+
+            <h2>3. 陷阱：ROE 越高越好嗎？</h2>
+            <p>雖然我們喜歡高 ROE，但要小心<strong>「舉債衝高」</strong>的陷阱。</p>
+            <p>根據杜邦分析法，ROE 可以透過「提高財務槓桿（借錢）」來衝高。如果一家公司 ROE 很高，但負債比率也高達 70% 以上，那這家公司可能是在玩火。一旦景氣反轉，龐大的利息壓力可能會壓垮公司。</p>
+            <p><strong>💡 專家解法：</strong>在使用選股工具時，除了看 ROE，務必同時檢查「負債比」或確認其獲利是否來自「本業」。</p>
+
+            <h2>4. 實戰教學：如何 3 秒找出高 ROE 好股？</h2>
+            <p>不需要手動去翻閱每一家公司的財報，我們開發的 <strong>TW-PocketScreener</strong> 已經內建了「巴菲特篩選邏輯」。</p>
+            
+            <h3>操作步驟：</h3>
+            <ol>
+                <li>進入篩選工具頁面。</li>
+                <li>點擊<strong>「一鍵存股」</strong>按鈕。</li>
+                <li>系統會自動設定 <strong>5 年平均 ROE > 15%</strong> 的條件。</li>
+                <li>您將立即獲得一份經過嚴格檢驗的潛力股清單。</li>
+            </ol>
+
+            <div class="cta-box">
+                <h2>準備好尋找您的下一檔定存股了嗎？</h2>
+                <p>免費使用最強大的台股篩選器，數據已更新至最新財報。</p>
+                <a href="/Demo_stock/" class="btn">🚀 立即前往篩選工具</a>
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Eason Chang. All rights reserved.</p>
+        <p>本站內容僅供教學參考，不構成投資建議。</p>
+        <p><a href="/privacy.html">隱私權政策</a> | <a href="mailto:taco1243@gmail.com">聯絡我們</a></p>
+    </footer>
+
+</body>
+</html>
