@@ -4,163 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="公司賺錢就是好股票嗎？小心「業外收入」的陷阱！教你如何使用本業獲利比率（本業純度）分辨真正的護城河優質股。">
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973"
-     crossorigin="anonymous"></script>
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973" crossorigin="anonymous"></script>
     <title>護城河選股法：如何分辨一家公司的「本業」是否真的賺錢？ | TW-PocketScreener</title>
-
     <style>
-        :root {
-            --primary-color: #0d6efd;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --white: #ffffff;
-            --success-color: #198754;
-        }
-        body {
-            font-family: "Microsoft JhengHei", Arial, sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: var(--white);
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav li { margin: 0 10px; }
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        nav a:hover { color: var(--primary-color); }
+        :root { --primary-color: #0d6efd; --text-color: #333; --bg-color: #f8f9fa; }
+        body { font-family: "Microsoft JhengHei", Arial, sans-serif; line-height: 1.8; color: var(--text-color); background-color: var(--bg-color); margin: 0; padding: 0; }
 
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+        /* 統一導覽列 */
+        nav { background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; width: 100%; overflow: hidden; }
+        nav ul { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0; padding: 10px 20px; list-style: none; gap: 15px; scrollbar-width: none; }
+        nav ul::-webkit-scrollbar { display: none; }
+        nav li { flex: 0 0 auto; margin: 0; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: bold; font-size: 1rem; display: inline-block; padding: 8px 12px; border-radius: 20px; background-color: #f8f9fa; transition: all 0.2s; }
+        nav a:hover, nav a.active { color: white; background-color: var(--primary-color); }
+
+        .container { max-width: 800px; margin: 30px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         h1 { font-size: 2em; color: #2c3e50; border-bottom: 3px solid var(--primary-color); padding-bottom: 15px; }
         h2 { color: #2c3e50; margin-top: 40px; border-left: 5px solid var(--primary-color); padding-left: 15px; }
         p { margin-bottom: 20px; font-size: 1.1em; }
-        
-        .concept-box {
-            background-color: #e8f5e9;
-            border-left: 5px solid #198754;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-
-        .cta-box {
-            text-align: center;
-            margin-top: 50px;
-            padding: 40px;
-            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
-            color: white;
-            border-radius: 10px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background-color: #ffc107;
-            color: #333;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: transform 0.2s;
-        }
+        .concept-box { background-color: #e8f5e9; border-left: 5px solid #198754; padding: 20px; margin: 30px 0; border-radius: 5px; }
+        .cta-box { text-align: center; margin-top: 50px; padding: 40px; background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%); color: white; border-radius: 10px; }
+        .btn { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: #ffc107; color: #333; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em; transition: transform 0.2s; }
         .btn:hover { transform: scale(1.05); }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 50px;
-        }
+        footer { text-align: center; padding: 20px; color: #666; font-size: 0.9em; margin-top: 50px; }
         footer a { color: #666; }
     </style>
 </head>
 <body>
-
     <nav>
         <ul>
             <li><a href="/">首頁</a></li>
             <li><a href="/Demo_stock/">📈 股票工具</a></li>
             <li><a href="/roe-guide.html">ROE 教學</a></li>
-            <li><a href="/moat-investing.html" style="color: #0d6efd;">🛡️ 護城河選股</a></li>
+            <li><a href="/dividend-strategy.html">殖利率陷阱</a></li>
+            <li><a href="/moat-investing.html" class="active">護城河選股</a></li>
+            <li><a href="/eps-growth.html">EPS 成長</a></li>
+            <li><a href="/gross-margin.html">毛利護城河</a></li>
+            <li><a href="/dividend-payout.html">配息率秘密</a></li>
         </ul>
     </nav>
-
     <div class="container">
         <article>
             <h1>護城河選股法：如何分辨一家公司的「本業」是否真的賺錢？</h1>
             <p>巴菲特曾說過：「只有當潮水退去時，你才知道誰在裸泳。」</p>
-            <p>在財報分析中，最容易讓投資人「裸泳」的陷阱，就是分不清楚這家公司賺的錢，究竟是來自<strong>「賣漢堡（本業）」</strong>還是<strong>「賣店面（業外）」</strong>。今天這篇文章將揭露主力大戶最愛用的檢視標準：<strong>本業純度</strong>。</p>
-
-            
+            <p>在財報分析中，最容易讓投資人「裸泳」的陷阱，就是分不清楚這家公司賺的錢，究竟是來自<strong>「賣漢堡（本業）」</strong>還是<strong>「賣店面（業外）」</strong>。</p>
 
             <h2>1. 什麼是「本業獲利」與「業外收入」？</h2>
             <ul>
-                <li><strong>營業利益 (Operating Income)：</strong>公司靠核心業務賺的錢。例如台積電靠做晶片賺的錢，統一超商靠賣咖啡賺的錢。這是股價長線的支撐。</li>
-                <li><strong>業外收入 (Non-operating Income)：</strong>一次性的意外之財。例如賣掉一塊土地、匯率波動賺到的匯差、或是領到的保險理賠金。</li>
+                <li><strong>營業利益 (Operating Income)：</strong>公司靠核心業務賺的錢。這是股價長線的支撐。</li>
+                <li><strong>業外收入 (Non-operating Income)：</strong>一次性的意外之財。例如賣掉一塊土地、匯率波動賺到的匯差。</li>
             </ul>
 
             <h2>2. 恐怖案例：EPS 暴衝的假象</h2>
-            <p>想像一下，某家紡織廠本業年年虧損，股價只剩 10 元。突然有一天，財報公布 EPS 高達 10 元！股價瞬間漲停。</p>
-            <p>散戶衝進去買，結果發現那 10 元是因為公司「賣掉了祖產土地」換來的。明年沒有土地可賣了，EPS 瞬間打回原形變負值，股價直接腰斬。這就是典型的<strong>「業外灌水陷阱」</strong>。</p>
+            <p>某家紡織廠本業虧損，突然財報公布 EPS 高達 10 元！結果是因為公司「賣掉了祖產土地」。明年沒有土地可賣了，EPS 瞬間打回原形，股價腰斬。</p>
 
             <h2>3. 護城河指標：本業純度 > 80%</h2>
             <div class="concept-box">
                 <strong>定義：本業純度 = (營業利益 / 稅前淨利) × 100%</strong>
             </div>
-            <p>這個指標代表公司每賺 100 元，有多少比例是靠「真本事」賺來的。</p>
-            <ul>
-                <li><strong>純度 > 80%：</strong>專注本業的優質公司（如台積電、聯發科）。</li>
-                <li><strong>純度 < 50%：</strong>不務正業，或變成控股公司，股價波動風險極大。</li>
-                <li><strong>純度為負值：</strong>本業虧損，靠賣家產度日，這是最危險的殭屍股。</li>
-            </ul>
-
-            <h2>4. 如何使用工具避開「不純」的股票？</h2>
-            <p>您不需要自己去翻財報計算機。<strong>TW-PocketScreener</strong> 是市面上少數內建「本業純度」濾鏡的免費工具。</p>
-            <p>只要開啟篩選器，勾選<strong>「本業純度 > 80%」</strong>，系統就會自動把那些靠賣地、靠匯差灌水的公司全部剔除，留下來的都是真金不怕火煉的產業龍頭。</p>
+            <p>這個指標代表公司每賺 100 元，有多少比例是靠「真本事」賺來的。<strong>TW-PocketScreener</strong> 內建此濾鏡，幫您剔除虛胖地雷股。</p>
 
             <div class="cta-box">
                 <h2>別再買到「虛胖」的地雷股！</h2>
                 <p>立即檢測您手上的持股，本業獲利夠不夠「純」？</p>
                 <a href="/Demo_stock/" class="btn">🚀 立即篩選高純度好股</a>
             </div>
-
         </article>
     </div>
-
     <footer>
         <p>&copy; 2026 Eason Chang. All rights reserved.</p>
         <p><a href="/privacy.html">隱私權政策</a> | <a href="mailto:taco1243@gmail.com">聯絡我們</a></p>
     </footer>
-
 </body>
 </html>
