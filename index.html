@@ -6,11 +6,10 @@
     <meta name="description" content="TW-PocketScreener 是一款專為台灣投資人設計的智慧型存股篩選工具，結合巴菲特投資心法，自動分析台股財報，找出具備護城河的定存標的。">
     
     <meta name="google-adsense-account" content="ca-pub-3682384993858973">
-
-    <title>TW-PocketScreener 台股智慧篩選器 | 您的存股好夥伴</title>
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973"
      crossorigin="anonymous"></script>
+
+    <title>TW-PocketScreener 台股智慧篩選器 | 您的存股好夥伴</title>
 
     <style>
         :root {
@@ -26,10 +25,10 @@
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
-            padding: 0; /* 移除 body padding 以便讓導覽列貼頂 */
+            padding: 0;
         }
         
-        /* 新增：置頂導覽列樣式 */
+        /* 置頂導覽列 */
         nav {
             background-color: white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -46,10 +45,11 @@
             display: flex;
             align-items: center;
             height: 60px;
+            overflow-x: auto; /* 手機版可橫向捲動 */
         }
         nav li {
             margin-right: 20px;
-            margin-bottom: 0; /* 覆蓋全域 li 設定 */
+            white-space: nowrap;
         }
         nav a {
             text-decoration: none;
@@ -58,31 +58,21 @@
             font-size: 1.05rem;
         }
         nav a:hover { color: var(--primary-color); }
-        /* 導覽列結束 */
 
+        /* 主要容器 */
         .container {
             max-width: 800px;
-            margin: 30px auto; /* 調整上邊距 */
+            margin: 30px auto;
             background: white;
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        h3 {
-            color: #198754;
-            margin-top: 25px;
-        }
+        
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 10px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-top: 40px; }
+        h3 { color: #198754; margin-top: 25px; }
+        
         .quote {
             text-align: center;
             font-style: italic;
@@ -93,16 +83,12 @@
             padding: 15px;
             border-radius: 8px;
         }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #d63384;
-        }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .highlight { font-weight: bold; color: #d63384; }
+        
+        /* CTA 按鈕區塊 */
         .cta-section {
             text-align: center;
             margin-top: 50px;
@@ -125,25 +111,55 @@
         .btn:hover {
             background-color: #0b5ed7;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(13, 110, 253, 0.4);
         }
         
-        /* 新增：推薦閱讀區塊 */
+        /* 推薦閱讀區塊 (Grid 佈局) */
         .read-more {
-            margin-top: 30px;
-            padding: 20px;
+            margin-top: 40px;
+            padding: 25px;
             background-color: #fff3cd;
             border-left: 5px solid #ffc107;
             border-radius: 5px;
         }
-        .read-more h4 { margin: 0 0 10px 0; color: #856404; }
-        .read-more a { font-weight: bold; text-decoration: underline; color: #333; }
+        .read-more h4 {
+            margin: 0 0 20px 0;
+            color: #856404;
+            font-size: 1.3em;
+            text-align: center;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 兩欄式 */
+            gap: 15px;
+        }
+        .article-link {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            border-left: 4px solid var(--primary-color);
+        }
+        .article-link:hover {
+            transform: translateX(5px);
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+        }
+        /* 手機版改回單欄 */
+        @media (max-width: 600px) {
+            .article-grid { grid-template-columns: 1fr; }
+        }
         
         .footer {
             text-align: center;
             margin-top: 50px;
             font-size: 0.9em;
             color: var(--secondary-color);
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
         .footer a { color: var(--secondary-color); text-decoration: none; }
         .footer a:hover { text-decoration: underline; }
@@ -154,8 +170,10 @@
     <nav>
         <ul>
             <li><a href="/">首頁</a></li>
-            <li><a href="/Demo_stock/">📈 股票篩選工具</a></li>
-            <li><a href="/roe-guide.html">📘 ROE 選股教學</a></li>
+            <li><a href="/Demo_stock/">📈 股票工具</a></li>
+            <li><a href="/roe-guide.html">ROE 教學</a></li>
+            <li><a href="/dividend-strategy.html">殖利率陷阱</a></li>
+            <li><a href="/moat-investing.html">護城河選股</a></li>
         </ul>
     </nav>
 
@@ -180,15 +198,15 @@
         <h3>💎 獲利護城河</h3>
         <ul>
             <li><span class="highlight">5年平均 ROE > 15%：</span>股神巴菲特最看重的指標，確保公司運用股東資金的效率極高。</li>
-            <li><span class="highlight">本業純度 > 80% (v2.2新功能)：</span>確保獲利來自核心業務，而非一次性業外收益。</li>
-            <li><span class="highlight">毛利變動 < 5% (v2.2新功能)：</span>確認公司具備定價權，不受景氣循環劇烈影響。</li>
+            <li><span class="highlight">本業純度 > 80%：</span>確保獲利來自核心業務，而非一次性業外收益。</li>
+            <li><span class="highlight">毛利變動 < 5%：</span>確認公司具備定價權，不受景氣循環劇烈影響。</li>
         </ul>
 
         <h3>💎 股息永動機</h3>
         <ul>
             <li><span class="highlight">連續 10 年配息：</span>經歷過金融風暴考驗，依然能穩定發錢的企業。</li>
             <li><span class="highlight">5年平均殖利率 > 5%：</span>確保買在合理的價格區間，擁有足夠的安全邊際。</li>
-            <li><span class="highlight">盈餘發放率 60%~100% (v2.2新功能)：</span>賺多少發多少，公司大方且財務健康。</li>
+            <li><span class="highlight">盈餘發放率 60%~100%：</span>賺多少發多少，公司大方且財務健康。</li>
         </ul>
 
         <h3>💎 成長與動能</h3>
@@ -205,8 +223,34 @@
 
         <div class="read-more">
             <h4>💡 投資知識充電站</h4>
-            <p>不懂這些指標怎麼選股？我們準備了詳細的教學文章：</p>
-            <p>👉 <a href="/roe-guide.html">ROE (股東權益報酬率) 完全攻略：為什麼巴菲特堅持要看這個指標？</a></p>
+            <p style="text-align: center; margin-bottom: 20px;">不懂財報指標怎麼選股？我們準備了詳細的教學文章：</p>
+            
+            <div class="article-grid">
+                <a href="/roe-guide.html" class="article-link">
+                    1. ROE 選股完全攻略 <br>
+                    <span style="font-size:0.85em; font-weight:normal; color:#666;">巴菲特最愛的指標解析</span>
+                </a>
+                <a href="/dividend-strategy.html" class="article-link">
+                    2. 避開殖利率陷阱 <br>
+                    <span style="font-size:0.85em; font-weight:normal; color:#666;">小心賺股息賠價差</span>
+                </a>
+                <a href="/moat-investing.html" class="article-link">
+                    3. 護城河選股法 <br>
+                    <span style="font-size:0.85em; font-weight:normal; color:#666;">分辨本業獲利與業外收入</span>
+                </a>
+                <a href="/eps-growth.html" class="article-link">
+                    4. EPS 成長飆股 <br>
+                    <span style="font-size:0.85em; font-weight:normal; color:#666;">抓出潛力股的 3 個關鍵</span>
+                </a>
+                <a href="/gross-margin.html" class="article-link">
+                    5. 毛利護城河 (定價權) <br>
+                    <span style="font-size:0.85em; font-weight:normal; color:#666;">找出不受景氣影響的好股</span>
+                </a>
+                <a href="/dividend-payout.html" class="article-link">
+                    6. 配息率與現金流 <br>
+                    <span style="font-size:0.85em; font-weight:normal; color:#666;">篩選大方又穩健的公司</span>
+                </a>
+            </div>
         </div>
 
         <div class="footer">
