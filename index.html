@@ -28,36 +28,66 @@
             padding: 0;
         }
         
-        /* 置頂導覽列 */
+        /* === [優化重點] 手機版左右滑動導覽列 === */
         nav {
             background-color: white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 0 20px;
+            /* 讓導覽列在手機上滿版，不留白邊 */
+            width: 100%;
+            overflow: hidden; 
         }
+
         nav ul {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0;
-            list-style: none;
+            /* 1. 排列方式 */
             display: flex;
+            flex-wrap: nowrap;       /* 強制不換行 (關鍵) */
             align-items: center;
-            height: 60px;
-            overflow-x: auto; /* 手機版可橫向捲動 */
+            justify-content: flex-start; /* 靠左對齊，確保滑動時不會切到第一個選項 */
+            
+            /* 2. 滑動設定 */
+            overflow-x: auto;        /* 開啟橫向捲動 */
+            -webkit-overflow-scrolling: touch; /* 讓 iOS 滑動有慣性效果 (更順暢) */
+            
+            /* 3. 外觀設定 */
+            margin: 0;
+            padding: 10px 20px;      /* 上下 10px，左右留一點空間 */
+            list-style: none;
+            gap: 15px;               /* 按鈕之間的間距 */
+            
+            /* 4. 隱藏醜醜的捲軸 (但在手機上依然可以滑) */
+            scrollbar-width: none;   /* Firefox */
         }
+        
+        /* Chrome, Safari, Edge 隱藏捲軸 */
+        nav ul::-webkit-scrollbar {
+            display: none;
+        }
+
         nav li {
-            margin-right: 20px;
-            white-space: nowrap;
+            flex: 0 0 auto;          /* 關鍵：防止項目被壓縮，保持原始寬度 */
+            white-space: nowrap;     /* 文字強制不換行 */
         }
+
         nav a {
             text-decoration: none;
             color: var(--text-color);
             font-weight: bold;
-            font-size: 1.05rem;
+            font-size: 1rem;
+            display: inline-block;
+            padding: 8px 12px;       /* 增加點擊範圍 */
+            border-radius: 20px;     /* 變成膠囊狀按鈕，更有質感 */
+            background-color: #f8f9fa; /* 預設給個淡灰色背景，提示這是按鈕 */
+            transition: all 0.2s;
         }
-        nav a:hover { color: var(--primary-color); }
+
+        nav a:hover, nav a:active { 
+            color: white; 
+            background-color: var(--primary-color); /* 點擊或滑過變藍色 */
+        }
+        /* ========================================== */
 
         /* 主要容器 */
         .container {
@@ -174,6 +204,9 @@
             <li><a href="/roe-guide.html">ROE 教學</a></li>
             <li><a href="/dividend-strategy.html">殖利率陷阱</a></li>
             <li><a href="/moat-investing.html">護城河選股</a></li>
+            <li><a href="/eps-growth.html">EPS 成長</a></li>
+            <li><a href="/gross-margin.html">毛利護城河</a></li>
+            <li><a href="/dividend-payout.html">配息率秘密</a></li>
         </ul>
     </nav>
 
