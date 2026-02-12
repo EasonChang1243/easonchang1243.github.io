@@ -4,163 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EPS 是股價的推進器！如何看出一家公司處於成長期還是衰退期？掌握 3 個 EPS 關鍵設定，幫您用 TW-PocketScreener 找出下一檔潛力飆股。">
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973"
-     crossorigin="anonymous"></script>
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3682384993858973" crossorigin="anonymous"></script>
     <title>EPS 成長率怎麼看？篩選潛力飆股的 3 個關鍵設定 | TW-PocketScreener</title>
-
     <style>
-        :root {
-            --primary-color: #0d6efd;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --white: #ffffff;
-            --trend-color: #d63384;
-        }
-        body {
-            font-family: "Microsoft JhengHei", Arial, sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: var(--white);
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav li { margin: 0 10px; }
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        nav a:hover { color: var(--primary-color); }
+        :root { --primary-color: #0d6efd; --text-color: #333; --bg-color: #f8f9fa; --trend-color: #d63384; }
+        body { font-family: "Microsoft JhengHei", Arial, sans-serif; line-height: 1.8; color: var(--text-color); background-color: var(--bg-color); margin: 0; padding: 0; }
 
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+        /* 統一導覽列 */
+        nav { background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; width: 100%; overflow: hidden; }
+        nav ul { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0; padding: 10px 20px; list-style: none; gap: 15px; scrollbar-width: none; }
+        nav ul::-webkit-scrollbar { display: none; }
+        nav li { flex: 0 0 auto; margin: 0; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: bold; font-size: 1rem; display: inline-block; padding: 8px 12px; border-radius: 20px; background-color: #f8f9fa; transition: all 0.2s; }
+        nav a:hover, nav a.active { color: white; background-color: var(--primary-color); }
+
+        .container { max-width: 800px; margin: 30px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         h1 { font-size: 2em; color: #2c3e50; border-bottom: 3px solid var(--primary-color); padding-bottom: 15px; }
         h2 { color: #2c3e50; margin-top: 40px; border-left: 5px solid var(--primary-color); padding-left: 15px; }
         p { margin-bottom: 20px; font-size: 1.1em; }
-        
-        .trend-box {
-            background-color: #f8e1eb;
-            border-left: 5px solid #d63384;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-
-        .cta-box {
-            text-align: center;
-            margin-top: 50px;
-            padding: 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 10px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background-color: #ffc107;
-            color: #333;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: transform 0.2s;
-        }
+        .trend-box { background-color: #f8e1eb; border-left: 5px solid #d63384; padding: 20px; margin: 30px 0; border-radius: 5px; }
+        .cta-box { text-align: center; margin-top: 50px; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px; }
+        .btn { display: inline-block; margin-top: 20px; padding: 15px 40px; background-color: #ffc107; color: #333; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em; transition: transform 0.2s; }
         .btn:hover { transform: scale(1.05); }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 50px;
-        }
+        footer { text-align: center; padding: 20px; color: #666; font-size: 0.9em; margin-top: 50px; }
         footer a { color: #666; }
     </style>
 </head>
 <body>
-
     <nav>
         <ul>
             <li><a href="/">首頁</a></li>
             <li><a href="/Demo_stock/">📈 股票工具</a></li>
             <li><a href="/roe-guide.html">ROE 教學</a></li>
-            <li><a href="/eps-growth.html" style="color: #0d6efd;">🚀 EPS 成長股</a></li>
+            <li><a href="/dividend-strategy.html">殖利率陷阱</a></li>
+            <li><a href="/moat-investing.html">護城河選股</a></li>
+            <li><a href="/eps-growth.html" class="active">EPS 成長</a></li>
+            <li><a href="/gross-margin.html">毛利護城河</a></li>
+            <li><a href="/dividend-payout.html">配息率秘密</a></li>
         </ul>
     </nav>
-
     <div class="container">
         <article>
             <h1>EPS 成長率怎麼看？篩選潛力飆股的 3 個關鍵設定</h1>
             <p>股價為什麼會漲？短期看籌碼，長期看獲利。而最能代表獲利能力的指標，就是 <strong>EPS (每股盈餘)</strong>。</p>
             <p>對於成長型投資人來說，我們不追求高殖利率，我們追求的是「今年賺得比去年多，明年又賺得比今年多」。這種獲利爆發力，才是推動股價翻倍的引擎。</p>
 
-            
-
             <h2>1. 什麼是 EPS？</h2>
-            <p>EPS (Earnings Per Share) 代表<strong>「公司為每一股賺了多少錢」</strong>。</p>
-            <p>如果一家公司今年 EPS 是 5 元，股價 100 元 (本益比 20 倍)。如果明年 EPS 成長到 10 元，市場願意給予同樣的 20 倍本益比，股價就有潛力漲到 200 元。這就是成長股獲利的邏輯。</p>
+            <p>EPS 代表<strong>「公司為每一股賺了多少錢」</strong>。如果明年 EPS 翻倍，市場願意給予同樣的本益比，股價就有潛力翻倍。</p>
 
             <h2>2. 篩選飆股的 3 個關鍵設定</h2>
-            <p>在使用 TW-PocketScreener 時，建議您鎖定以下 3 個條件，找出正在起飛的股票：</p>
-
             <div class="trend-box">
                 <h3>關鍵一：近一年 EPS > 1 元</h3>
-                <p>這是一個最基本的門檻，確保公司是賺錢的，而且不是那種只賺 0.1 元的雞蛋水餃股。</p>
+                <p>最基本門檻，確保公司是賺錢的，排除雞蛋水餃股。</p>
             </div>
-
             <div class="trend-box">
                 <h3>關鍵二：5 年平均 EPS > 2 元</h3>
-                <p>這代表公司不僅今年賺錢，過去 5 年也都有穩定的獲利能力，排除了景氣循環股（如航運股）暴起暴落的風險。</p>
+                <p>確保過去 5 年獲利穩定，排除景氣循環股風險。</p>
             </div>
-
             <div class="trend-box">
-                <h3>關鍵三：EPS 逐年成長 (趨勢向上)</h3>
-                <p>這是最重要的！觀察圖表，如果柱狀圖呈現階梯式上升，代表公司產品競爭力越來越強，這種股票遇到大盤回檔時，通常最抗跌，反彈也最快。</p>
+                <h3>關鍵三：EPS 逐年成長</h3>
+                <p>觀察趨勢。如果柱狀圖呈階梯式上升，代表產品競爭力強，股價最抗跌。</p>
             </div>
-
-            <h2>3. 實戰應用</h2>
-            <p>我們的工具將繁瑣的財報數據視覺化。您不需要一張張看報表，只需在工具中設定<strong>「EPS 穩定成長」</strong>條件，系統就能幫您從 1700 檔台股中，過濾出那些獲利引擎正在加速的潛力股。</p>
 
             <div class="cta-box">
                 <h2>尋找下一檔台積電？</h2>
                 <p>用數據說話，找出獲利爆發的成長股。</p>
                 <a href="/Demo_stock/" class="btn">🚀 立即篩選 EPS 成長股</a>
             </div>
-
         </article>
     </div>
-
     <footer>
         <p>&copy; 2026 Eason Chang. All rights reserved.</p>
         <p><a href="/privacy.html">隱私權政策</a> | <a href="mailto:taco1243@gmail.com">聯絡我們</a></p>
     </footer>
-
 </body>
 </html>
