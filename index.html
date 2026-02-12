@@ -26,11 +26,43 @@
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
-            padding: 20px;
+            padding: 0; /* 移除 body padding 以便讓導覽列貼頂 */
         }
-        .container {
+        
+        /* 新增：置頂導覽列樣式 */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        nav ul {
             max-width: 800px;
             margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        nav li {
+            margin-right: 20px;
+            margin-bottom: 0; /* 覆蓋全域 li 設定 */
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1.05rem;
+        }
+        nav a:hover { color: var(--primary-color); }
+        /* 導覽列結束 */
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto; /* 調整上邊距 */
             background: white;
             padding: 40px;
             border-radius: 15px;
@@ -95,6 +127,18 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(13, 110, 253, 0.4);
         }
+        
+        /* 新增：推薦閱讀區塊 */
+        .read-more {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            border-radius: 5px;
+        }
+        .read-more h4 { margin: 0 0 10px 0; color: #856404; }
+        .read-more a { font-weight: bold; text-decoration: underline; color: #333; }
+        
         .footer {
             text-align: center;
             margin-top: 50px;
@@ -106,6 +150,14 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="/">首頁</a></li>
+            <li><a href="/Demo_stock/">📈 股票篩選工具</a></li>
+            <li><a href="/roe-guide.html">📘 ROE 選股教學</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <h1>🚀 關於 TW-PocketScreener v2.3.2</h1>
@@ -149,6 +201,12 @@
             <a href="/Demo_stock/" class="btn">
                 🚀 立即開始使用工具
             </a>
+        </div>
+
+        <div class="read-more">
+            <h4>💡 投資知識充電站</h4>
+            <p>不懂這些指標怎麼選股？我們準備了詳細的教學文章：</p>
+            <p>👉 <a href="/roe-guide.html">ROE (股東權益報酬率) 完全攻略：為什麼巴菲特堅持要看這個指標？</a></p>
         </div>
 
         <div class="footer">
